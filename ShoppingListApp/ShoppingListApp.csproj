@@ -171,6 +171,7 @@
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\ManageController.cs" />
     <Compile Include="Controllers\NoteController.cs" />
+    <Compile Include="Controllers\ShoppingListController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
@@ -181,6 +182,10 @@
     <Compile Include="Migrations\201609081535092_NoteMigration.cs" />
     <Compile Include="Migrations\201609081535092_NoteMigration.Designer.cs">
       <DependentUpon>201609081535092_NoteMigration.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201609081848131_DBFix.cs" />
+    <Compile Include="Migrations\201609081848131_DBFix.Designer.cs">
+      <DependentUpon>201609081848131_DBFix.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
@@ -252,6 +257,11 @@
     <Content Include="Views\Note\Details.cshtml" />
     <Content Include="Views\Note\Edit.cshtml" />
     <Content Include="Views\Note\Index.cshtml" />
+    <Content Include="Views\ShoppingList\Create.cshtml" />
+    <Content Include="Views\ShoppingList\Delete.cshtml" />
+    <Content Include="Views\ShoppingList\Details.cshtml" />
+    <Content Include="Views\ShoppingList\Edit.cshtml" />
+    <Content Include="Views\ShoppingList\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
@@ -270,6 +280,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201609081535092_NoteMigration.resx">
       <DependentUpon>201609081535092_NoteMigration.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201609081848131_DBFix.resx">
+      <DependentUpon>201609081848131_DBFix.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
