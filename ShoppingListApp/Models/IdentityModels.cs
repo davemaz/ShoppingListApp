@@ -29,5 +29,7 @@ namespace ShoppingListApp.Models
         {
             return new ApplicationDbContext();
         }
+
+        public System.Data.Entity.DbSet<ShoppingListApp.Models.Note> Notes { get; set; }
     }
 }
