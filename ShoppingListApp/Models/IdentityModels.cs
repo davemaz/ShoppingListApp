@@ -30,8 +30,6 @@ namespace ShoppingListApp.Models
             return new ApplicationDbContext();
         }
 
-        public System.Data.Entity.DbSet<ShoppingListApp.Models.Note> Notes { get; set; }
-
         public System.Data.Entity.DbSet<ShoppingListApp.Models.ShoppingList> ShoppingLists { get; set; }
     }
 }

@@ -170,7 +170,6 @@
     <Compile Include="Controllers\AccountController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\ManageController.cs" />
-    <Compile Include="Controllers\NoteController.cs" />
     <Compile Include="Controllers\ShoppingListController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
@@ -187,11 +186,14 @@
     <Compile Include="Migrations\201609081848131_DBFix.Designer.cs">
       <DependentUpon>201609081848131_DBFix.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201609091711370_RemoveNoteModel.cs" />
+    <Compile Include="Migrations\201609091711370_RemoveNoteModel.Designer.cs">
+      <DependentUpon>201609091711370_RemoveNoteModel.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
     <Compile Include="Models\IdentityModels.cs" />
     <Compile Include="Models\ManageViewModels.cs" />
-    <Compile Include="Models\Note.cs" />
     <Compile Include="Models\ShoppingList.cs" />
     <Compile Include="Models\ShoppingListItem.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -252,11 +254,6 @@
     <Content Include="Views\Manage\VerifyPhoneNumber.cshtml" />
     <Content Include="Views\Shared\Lockout.cshtml" />
     <Content Include="Views\Shared\_LoginPartial.cshtml" />
-    <Content Include="Views\Note\Create.cshtml" />
-    <Content Include="Views\Note\Delete.cshtml" />
-    <Content Include="Views\Note\Details.cshtml" />
-    <Content Include="Views\Note\Edit.cshtml" />
-    <Content Include="Views\Note\Index.cshtml" />
     <Content Include="Views\ShoppingList\Create.cshtml" />
     <Content Include="Views\ShoppingList\Delete.cshtml" />
     <Content Include="Views\ShoppingList\Details.cshtml" />
@@ -283,6 +280,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201609081848131_DBFix.resx">
       <DependentUpon>201609081848131_DBFix.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201609091711370_RemoveNoteModel.resx">
+      <DependentUpon>201609091711370_RemoveNoteModel.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
