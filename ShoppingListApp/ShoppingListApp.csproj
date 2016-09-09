@@ -171,6 +171,7 @@
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\ManageController.cs" />
     <Compile Include="Controllers\ShoppingListController.cs" />
+    <Compile Include="Controllers\ShoppingListItemController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
@@ -189,6 +190,10 @@
     <Compile Include="Migrations\201609091711370_RemoveNoteModel.cs" />
     <Compile Include="Migrations\201609091711370_RemoveNoteModel.Designer.cs">
       <DependentUpon>201609091711370_RemoveNoteModel.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201609091720357_ShoppingListItem.cs" />
+    <Compile Include="Migrations\201609091720357_ShoppingListItem.Designer.cs">
+      <DependentUpon>201609091720357_ShoppingListItem.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
@@ -259,6 +264,11 @@
     <Content Include="Views\ShoppingList\Details.cshtml" />
     <Content Include="Views\ShoppingList\Edit.cshtml" />
     <Content Include="Views\ShoppingList\Index.cshtml" />
+    <Content Include="Views\ShoppingListItem\Create.cshtml" />
+    <Content Include="Views\ShoppingListItem\Delete.cshtml" />
+    <Content Include="Views\ShoppingListItem\Details.cshtml" />
+    <Content Include="Views\ShoppingListItem\Edit.cshtml" />
+    <Content Include="Views\ShoppingListItem\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
@@ -283,6 +293,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201609091711370_RemoveNoteModel.resx">
       <DependentUpon>201609091711370_RemoveNoteModel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201609091720357_ShoppingListItem.resx">
+      <DependentUpon>201609091720357_ShoppingListItem.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>

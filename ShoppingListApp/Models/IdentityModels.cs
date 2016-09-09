@@ -31,5 +31,7 @@ namespace ShoppingListApp.Models
         }
 
         public System.Data.Entity.DbSet<ShoppingListApp.Models.ShoppingList> ShoppingLists { get; set; }
+
+        public System.Data.Entity.DbSet<ShoppingListApp.Models.ShoppingListItem> ShoppingListItems { get; set; }
     }
 }

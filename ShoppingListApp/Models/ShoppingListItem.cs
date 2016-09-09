@@ -13,6 +13,8 @@ namespace ShoppingListApp.Models
 
         public string Contents { get; set; }
 
+        public string Note { get; set; }
+
         public int Priority { get; set; }
 
         public bool IsChecked { get; set; }
@@ -20,6 +22,8 @@ namespace ShoppingListApp.Models
         public DateTimeOffset CreatedUtc { get; set; }
 
         public DateTimeOffset ModifiedUtc { get; set; }
+
+        public virtual ShoppingList ShoppingList { get; set; }
         
     }
 }
