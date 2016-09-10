@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations;
 using System.Linq;
 using System.Web;
 
@@ -15,7 +16,7 @@ namespace ShoppingListApp.Models
 
         public string Note { get; set; }
 
-        public int Priority { get; set; }
+        public Priority Priority { get; set; }
 
         public bool IsChecked { get; set; }
 
