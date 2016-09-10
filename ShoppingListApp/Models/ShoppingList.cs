@@ -11,7 +11,7 @@ namespace ShoppingListApp.Models
         public int Id { get; set; }
         public int UserId { get; set; }
         public string Name { get; set; }
-        public string Color { get; set; }
+        public Color Color { get; set; }
         public DateTimeOffset CreatedUtc { get; set; }
         public DateTimeOffset ModifiedUtc { get; set; }
     }

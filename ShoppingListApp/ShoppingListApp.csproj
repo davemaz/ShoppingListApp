@@ -183,8 +183,13 @@
     <Compile Include="Migrations\201609102118571_PriorityEnum.Designer.cs">
       <DependentUpon>201609102118571_PriorityEnum.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201609102157037_ColorEnum.cs" />
+    <Compile Include="Migrations\201609102157037_ColorEnum.Designer.cs">
+      <DependentUpon>201609102157037_ColorEnum.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
+    <Compile Include="Models\Color.cs" />
     <Compile Include="Models\IdentityModels.cs" />
     <Compile Include="Models\ManageViewModels.cs" />
     <Compile Include="Models\Priority.cs" />
@@ -248,16 +253,16 @@
     <Content Include="Views\Manage\VerifyPhoneNumber.cshtml" />
     <Content Include="Views\Shared\Lockout.cshtml" />
     <Content Include="Views\Shared\_LoginPartial.cshtml" />
-    <Content Include="Views\ShoppingList\Create.cshtml" />
-    <Content Include="Views\ShoppingList\Delete.cshtml" />
-    <Content Include="Views\ShoppingList\Details.cshtml" />
-    <Content Include="Views\ShoppingList\Edit.cshtml" />
-    <Content Include="Views\ShoppingList\Index.cshtml" />
     <Content Include="Views\ShoppingListItem\Create.cshtml" />
     <Content Include="Views\ShoppingListItem\Delete.cshtml" />
     <Content Include="Views\ShoppingListItem\Details.cshtml" />
     <Content Include="Views\ShoppingListItem\Edit.cshtml" />
     <Content Include="Views\ShoppingListItem\Index.cshtml" />
+    <Content Include="Views\ShoppingList\Create.cshtml" />
+    <Content Include="Views\ShoppingList\Delete.cshtml" />
+    <Content Include="Views\ShoppingList\Details.cshtml" />
+    <Content Include="Views\ShoppingList\Edit.cshtml" />
+    <Content Include="Views\ShoppingList\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
@@ -276,6 +281,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201609102118571_PriorityEnum.resx">
       <DependentUpon>201609102118571_PriorityEnum.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201609102157037_ColorEnum.resx">
+      <DependentUpon>201609102157037_ColorEnum.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
