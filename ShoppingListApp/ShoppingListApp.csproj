@@ -175,25 +175,9 @@
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
-    <Compile Include="Migrations\201609081439501_InitialCreate.cs" />
-    <Compile Include="Migrations\201609081439501_InitialCreate.Designer.cs">
-      <DependentUpon>201609081439501_InitialCreate.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201609081535092_NoteMigration.cs" />
-    <Compile Include="Migrations\201609081535092_NoteMigration.Designer.cs">
-      <DependentUpon>201609081535092_NoteMigration.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201609081848131_DBFix.cs" />
-    <Compile Include="Migrations\201609081848131_DBFix.Designer.cs">
-      <DependentUpon>201609081848131_DBFix.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201609091711370_RemoveNoteModel.cs" />
-    <Compile Include="Migrations\201609091711370_RemoveNoteModel.Designer.cs">
-      <DependentUpon>201609091711370_RemoveNoteModel.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201609091720357_ShoppingListItem.cs" />
-    <Compile Include="Migrations\201609091720357_ShoppingListItem.Designer.cs">
-      <DependentUpon>201609091720357_ShoppingListItem.cs</DependentUpon>
+    <Compile Include="Migrations\201609102049342_init.cs" />
+    <Compile Include="Migrations\201609102049342_init.Designer.cs">
+      <DependentUpon>201609102049342_init.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
@@ -282,20 +266,8 @@
     <Content Include="Scripts\jquery-1.10.2.min.map" />
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Migrations\201609081439501_InitialCreate.resx">
-      <DependentUpon>201609081439501_InitialCreate.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201609081535092_NoteMigration.resx">
-      <DependentUpon>201609081535092_NoteMigration.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201609081848131_DBFix.resx">
-      <DependentUpon>201609081848131_DBFix.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201609091711370_RemoveNoteModel.resx">
-      <DependentUpon>201609091711370_RemoveNoteModel.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201609091720357_ShoppingListItem.resx">
-      <DependentUpon>201609091720357_ShoppingListItem.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\201609102049342_init.resx">
+      <DependentUpon>201609102049342_init.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>

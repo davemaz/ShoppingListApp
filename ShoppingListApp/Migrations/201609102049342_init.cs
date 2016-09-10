@@ -3,7 +3,7 @@ namespace ShoppingListApp.Migrations
     using System;
     using System.Data.Entity.Migrations;
     
-    public partial class InitialCreate : DbMigration
+    public partial class init : DbMigration
     {
         public override void Up()
         {
@@ -29,6 +29,36 @@ namespace ShoppingListApp.Migrations
                 .ForeignKey("dbo.AspNetUsers", t => t.UserId, cascadeDelete: true)
                 .Index(t => t.UserId)
                 .Index(t => t.RoleId);
+            
+            CreateTable(
+                "dbo.ShoppingListItems",
+                c => new
+                    {
+                        Id = c.Int(nullable: false, identity: true),
+                        ShoppingListId = c.Int(nullable: false),
+                        Contents = c.String(),
+                        Note = c.String(),
+                        Priority = c.Int(nullable: false),
+                        IsChecked = c.Boolean(nullable: false),
+                        CreatedUtc = c.DateTimeOffset(nullable: false, precision: 7),
+                        ModifiedUtc = c.DateTimeOffset(nullable: false, precision: 7),
+                    })
+                .PrimaryKey(t => t.Id)
+                .ForeignKey("dbo.ShoppingLists", t => t.ShoppingListId, cascadeDelete: true)
+                .Index(t => t.ShoppingListId);
+            
+            CreateTable(
+                "dbo.ShoppingLists",
+                c => new
+                    {
+                        Id = c.Int(nullable: false, identity: true),
+                        UserId = c.Int(nullable: false),
+                        Name = c.String(),
+                        Color = c.String(),
+                        CreatedUtc = c.DateTimeOffset(nullable: false, precision: 7),
+                        ModifiedUtc = c.DateTimeOffset(nullable: false, precision: 7),
+                    })
+                .PrimaryKey(t => t.Id);
             
             CreateTable(
                 "dbo.AspNetUsers",
@@ -82,16 +112,20 @@ namespace ShoppingListApp.Migrations
             DropForeignKey("dbo.AspNetUserRoles", "UserId", "dbo.AspNetUsers");
             DropForeignKey("dbo.AspNetUserLogins", "UserId", "dbo.AspNetUsers");
             DropForeignKey("dbo.AspNetUserClaims", "UserId", "dbo.AspNetUsers");
+            DropForeignKey("dbo.ShoppingListItems", "ShoppingListId", "dbo.ShoppingLists");
             DropForeignKey("dbo.AspNetUserRoles", "RoleId", "dbo.AspNetRoles");
             DropIndex("dbo.AspNetUserLogins", new[] { "UserId" });
             DropIndex("dbo.AspNetUserClaims", new[] { "UserId" });
             DropIndex("dbo.AspNetUsers", "UserNameIndex");
+            DropIndex("dbo.ShoppingListItems", new[] { "ShoppingListId" });
             DropIndex("dbo.AspNetUserRoles", new[] { "RoleId" });
             DropIndex("dbo.AspNetUserRoles", new[] { "UserId" });
             DropIndex("dbo.AspNetRoles", "RoleNameIndex");
             DropTable("dbo.AspNetUserLogins");
             DropTable("dbo.AspNetUserClaims");
             DropTable("dbo.AspNetUsers");
+            DropTable("dbo.ShoppingLists");
+            DropTable("dbo.ShoppingListItems");
             DropTable("dbo.AspNetUserRoles");
             DropTable("dbo.AspNetRoles");
         }
