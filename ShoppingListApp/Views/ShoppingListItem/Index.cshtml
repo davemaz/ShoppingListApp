@@ -12,6 +12,9 @@
 <table class="table">
     <tr>
         <th>
+            @Html.DisplayNameFor(model => model.IsChecked)
+        </th>
+        <th>
             @Html.DisplayNameFor(model => model.ShoppingList.Name)
         </th>
         <th>
@@ -23,9 +26,9 @@
         <th>
             @Html.DisplayNameFor(model => model.Priority)
         </th>
-        <th>
+        @*<th>
             @Html.DisplayNameFor(model => model.IsChecked)
-        </th>
+        </th>*@
         <th>
             @Html.DisplayNameFor(model => model.CreatedUtc)
         </th>
@@ -36,7 +39,10 @@
     </tr>
 
 @foreach (var item in Model) {
-    <tr>
+    <tr>    
+        <td>
+            @Html.DisplayFor(modelItem => item.IsChecked)
+        </td>
         <td>
             @Html.DisplayFor(modelItem => item.ShoppingList.Name)
         </td>
@@ -49,9 +55,9 @@
         <td>
             @Html.DisplayFor(modelItem => item.Priority)
         </td>
-        <td>
+        @*<td>
             @Html.DisplayFor(modelItem => item.IsChecked)
-        </td>
+        </td>*@
         <td>
             @Html.DisplayFor(modelItem => item.CreatedUtc)
         </td>
@@ -59,9 +65,9 @@
             @Html.DisplayFor(modelItem => item.ModifiedUtc)
         </td>
         <td>
-            @Html.ActionLink("Edit", "Edit", new { id=item.Id }) |
-            @Html.ActionLink("Details", "Details", new { id=item.Id }) |
-            @Html.ActionLink("Delete", "Delete", new { id=item.Id })
+            @Html.ActionLink("Edit", "Edit", new {id = item.Id}) |
+            @Html.ActionLink("Details", "Details", new {id = item.Id}) |
+            @Html.ActionLink("Delete", "Delete", new {id = item.Id})
         </td>
     </tr>
 }
