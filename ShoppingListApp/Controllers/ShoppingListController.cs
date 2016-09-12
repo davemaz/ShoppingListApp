@@ -10,7 +10,6 @@ using ShoppingListApp.Models;
 
 namespace ShoppingListApp.Controllers
 {
-    [Authorize]
     public class ShoppingListController : Controller
     {
         private ApplicationDbContext db = new ApplicationDbContext();
@@ -47,7 +46,7 @@ namespace ShoppingListApp.Controllers
         // more details see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Create([Bind(Include = "Id,UserId,Name,Color,CreatedUtc,ModifiedUtc")] ShoppingList shoppingList)
+        public ActionResult Create([Bind(Include = "Id,Name,Color,CreatedUtc,ModifiedUtc")] ShoppingList shoppingList)
         {
             if (ModelState.IsValid)
             {
@@ -79,7 +78,7 @@ namespace ShoppingListApp.Controllers
         // more details see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Edit([Bind(Include = "Id,UserId,Name,Color,CreatedUtc,ModifiedUtc")] ShoppingList shoppingList)
+        public ActionResult Edit([Bind(Include = "Id,Name,Color,CreatedUtc,ModifiedUtc")] ShoppingList shoppingList)
         {
             if (ModelState.IsValid)
             {

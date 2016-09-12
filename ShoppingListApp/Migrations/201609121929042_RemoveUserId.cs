@@ -3,14 +3,16 @@ namespace ShoppingListApp.Migrations
     using System;
     using System.Data.Entity.Migrations;
     
-    public partial class PriorityEnum : DbMigration
+    public partial class RemoveUserId : DbMigration
     {
         public override void Up()
         {
+            DropColumn("dbo.ShoppingLists", "UserId");
         }
         
         public override void Down()
         {
+            AddColumn("dbo.ShoppingLists", "UserId", c => c.Int(nullable: false));
         }
     }
 }

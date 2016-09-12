@@ -7,13 +7,13 @@ namespace ShoppingListApp.Migrations
     using System.Resources;
     
     [GeneratedCode("EntityFramework.Migrations", "6.1.3-40302")]
-    public sealed partial class PriorityEnum : IMigrationMetadata
+    public sealed partial class RemoveUserId : IMigrationMetadata
     {
-        private readonly ResourceManager Resources = new ResourceManager(typeof(PriorityEnum));
+        private readonly ResourceManager Resources = new ResourceManager(typeof(RemoveUserId));
         
         string IMigrationMetadata.Id
         {
-            get { return "201609102118571_PriorityEnum"; }
+            get { return "201609121929042_RemoveUserId"; }
         }
         
         string IMigrationMetadata.Source

@@ -175,17 +175,13 @@
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
-    <Compile Include="Migrations\201609102049342_init.cs" />
-    <Compile Include="Migrations\201609102049342_init.Designer.cs">
-      <DependentUpon>201609102049342_init.cs</DependentUpon>
+    <Compile Include="Migrations\201609121919006_init.cs" />
+    <Compile Include="Migrations\201609121919006_init.Designer.cs">
+      <DependentUpon>201609121919006_init.cs</DependentUpon>
     </Compile>
-    <Compile Include="Migrations\201609102118571_PriorityEnum.cs" />
-    <Compile Include="Migrations\201609102118571_PriorityEnum.Designer.cs">
-      <DependentUpon>201609102118571_PriorityEnum.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201609102157037_ColorEnum.cs" />
-    <Compile Include="Migrations\201609102157037_ColorEnum.Designer.cs">
-      <DependentUpon>201609102157037_ColorEnum.cs</DependentUpon>
+    <Compile Include="Migrations\201609121929042_RemoveUserId.cs" />
+    <Compile Include="Migrations\201609121929042_RemoveUserId.Designer.cs">
+      <DependentUpon>201609121929042_RemoveUserId.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
@@ -276,14 +272,11 @@
     <Content Include="Scripts\jquery-1.10.2.min.map" />
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Migrations\201609102049342_init.resx">
-      <DependentUpon>201609102049342_init.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\201609121919006_init.resx">
+      <DependentUpon>201609121919006_init.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201609102118571_PriorityEnum.resx">
-      <DependentUpon>201609102118571_PriorityEnum.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201609102157037_ColorEnum.resx">
-      <DependentUpon>201609102157037_ColorEnum.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\201609121929042_RemoveUserId.resx">
+      <DependentUpon>201609121929042_RemoveUserId.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
