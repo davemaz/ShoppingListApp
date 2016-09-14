@@ -20,6 +20,12 @@ namespace ShoppingListApp.Controllers
             return View(db.ShoppingLists.ToList());
         }
 
+        public ActionResult ItemsByList(int id)
+        {
+            var shoppingListItems = db.ShoppingListItems.Include(s => s.ShoppingList).Where(l => l.Id == id);
+            return View(shoppingListItems.ToList());
+        }
+
         // GET: ShoppingList/Details/5
         public ActionResult Details(int? id)
         {
