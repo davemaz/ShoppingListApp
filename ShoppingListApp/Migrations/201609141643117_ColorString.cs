@@ -3,16 +3,16 @@ namespace ShoppingListApp.Migrations
     using System;
     using System.Data.Entity.Migrations;
     
-    public partial class RemoveUserId : DbMigration
+    public partial class ColorString : DbMigration
     {
         public override void Up()
         {
-            DropColumn("dbo.ShoppingLists", "UserId");
+            AlterColumn("dbo.ShoppingLists", "Color", c => c.String());
         }
         
         public override void Down()
         {
-            AddColumn("dbo.ShoppingLists", "UserId", c => c.Int(nullable: false));
+            AlterColumn("dbo.ShoppingLists", "Color", c => c.Int(nullable: false));
         }
     }
 }
