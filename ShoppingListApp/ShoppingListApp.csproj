@@ -175,13 +175,9 @@
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
-    <Compile Include="Migrations\201609141534189_init.cs" />
-    <Compile Include="Migrations\201609141534189_init.Designer.cs">
-      <DependentUpon>201609141534189_init.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201609141643117_ColorString.cs" />
-    <Compile Include="Migrations\201609141643117_ColorString.Designer.cs">
-      <DependentUpon>201609141643117_ColorString.cs</DependentUpon>
+    <Compile Include="Migrations\201609142227159_init.cs" />
+    <Compile Include="Migrations\201609142227159_init.Designer.cs">
+      <DependentUpon>201609142227159_init.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
@@ -272,11 +268,8 @@
     <Content Include="Scripts\jquery-1.10.2.min.map" />
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Migrations\201609141534189_init.resx">
-      <DependentUpon>201609141534189_init.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201609141643117_ColorString.resx">
-      <DependentUpon>201609141643117_ColorString.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\201609142227159_init.resx">
+      <DependentUpon>201609142227159_init.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>

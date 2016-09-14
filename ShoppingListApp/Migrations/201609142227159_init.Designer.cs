@@ -13,7 +13,7 @@ namespace ShoppingListApp.Migrations
         
         string IMigrationMetadata.Id
         {
-            get { return "201609141534189_init"; }
+            get { return "201609142227159_init"; }
         }
         
         string IMigrationMetadata.Source

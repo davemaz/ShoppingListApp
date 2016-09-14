@@ -53,7 +53,7 @@ namespace ShoppingListApp.Migrations
                     {
                         Id = c.Int(nullable: false, identity: true),
                         Name = c.String(),
-                        Color = c.Int(nullable: false),
+                        Color = c.String(),
                         CreatedUtc = c.DateTimeOffset(nullable: false, precision: 7),
                         ModifiedUtc = c.DateTimeOffset(nullable: false, precision: 7),
                     })
