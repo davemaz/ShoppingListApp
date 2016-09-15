@@ -61,6 +61,8 @@ namespace ShoppingListApp.Controllers
         {
             if (ModelState.IsValid)
             {
+                shoppingListItem.CreatedUtc = DateTime.UtcNow;
+                shoppingListItem.ModifiedUtc = DateTime.UtcNow;
                 db.ShoppingListItems.Add(shoppingListItem);
                 db.SaveChanges();
                 return RedirectToAction("Index");
@@ -95,6 +97,9 @@ namespace ShoppingListApp.Controllers
         {
             if (ModelState.IsValid)
             {
+                var currentListItem = db.ShoppingListItems.AsNoTracking().Where(c => c.Id == shoppingListItem.Id).FirstOrDefault();
+                shoppingListItem.CreatedUtc = currentListItem.CreatedUtc;
+                shoppingListItem.ModifiedUtc = DateTime.UtcNow;
                 db.Entry(shoppingListItem).State = EntityState.Modified;
                 db.SaveChanges();
                 return RedirectToAction("Index");
