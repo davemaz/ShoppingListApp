@@ -10,6 +10,7 @@ using ShoppingListApp.Models;
 
 namespace ShoppingListApp.Controllers
 {
+    [Authorize]
     public class ShoppingListController : Controller
     {
         private ApplicationDbContext db = new ApplicationDbContext();
