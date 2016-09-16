@@ -46,10 +46,10 @@
         </td>*@
         <td>
             @*@Html.ActionLink("Edit", "Edit", new { id=item.Id }) |*@
-            <input type="button" value="Show" onclick="location.href='@Url.Action("Show", "ItemsByList" )'" />
-            @*@Html.ActionLink("Show", "ItemsByList", "ShoppingListItem", new { id=item.Id }, null) |
-            @Html.ActionLink("Delete", "Delete", new { id=item.Id })*@
-            <input type="button" value="Delete" oneclick="location.href='@Url.Action("Delete", "Delete")'" />
+            @*<input type="button" value="Show" onclick="location.href='@Url.Action("ItemsByList", "ShoppingListItem" )'" />*@
+            @Html.ActionLink("Show", "ItemsByList", "ShoppingListItem", new { id=item.Id }, null) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.Id })
+            @*<input type="button" value="Delete" oneclick="location.href='@Url.Action("Delete", "Delete")'" />*@
         </td>
     </tr>
 }
