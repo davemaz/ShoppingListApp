@@ -4,13 +4,20 @@
     ViewBag.Title = "Shopping Lists";
 }
 
+<br />
 <h2>Shopping Lists</h2>
 
+<input type="button" value="Add List" style="float: right;" onclick="location.href='@Url.Action("Create", "ShoppingList")'" />
 <p>
-    @Html.ActionLink("Create New", "Create")
+    &nbsp;
 </p>
+
+@*<p>
+    @Html.ActionLink("Create New", "Create")
+</p>*@
+<hr />
 <table class="table">
-    <tr>
+    <tr bgcolor="#D3D3D3">
         <th>
             @Html.DisplayNameFor(model => model.Name)
         </th>
@@ -18,10 +25,7 @@
             @Html.DisplayNameFor(model => model.Color)
         </th>
         <th>
-            @Html.DisplayNameFor(model => model.CreatedUtc)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.ModifiedUtc)
+            @Html.DisplayNameFor(model => model.Options)
         </th>
         <th></th>
     </tr>
@@ -35,15 +39,17 @@
             @Html.DisplayFor(modelItem => item.Color)
         </td>
         <td>
-            @Html.DisplayFor(modelItem => item.CreatedUtc)
+            @Html.DisplayFor(modelItem => item.Options)
         </td>
-        <td>
+        @*<td>
             @Html.DisplayFor(modelItem => item.ModifiedUtc)
-        </td>
+        </td>*@
         <td>
-            @Html.ActionLink("Edit", "Edit", new { id=item.Id }) |
-            @Html.ActionLink("Show", "ItemsByList", "ShoppingListItem", new { id=item.Id }, null) |
-            @Html.ActionLink("Delete", "Delete", new { id=item.Id })
+            @*@Html.ActionLink("Edit", "Edit", new { id=item.Id }) |*@
+            <input type="button" value="Show" onclick="location.href='@Url.Action("Show", "ItemsByList" )'" />
+            @*@Html.ActionLink("Show", "ItemsByList", "ShoppingListItem", new { id=item.Id }, null) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.Id })*@
+            <input type="button" value="Delete" oneclick="location.href='@Url.Action("Delete", "Delete")'" />
         </td>
     </tr>
 }

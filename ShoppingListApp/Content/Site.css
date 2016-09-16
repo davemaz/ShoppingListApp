@@ -22,8 +22,8 @@ select,
 textarea {
     max-width: 280px;
 }
-.navbar-inverse {
-    background-color: #1638d2;
+/*.navbar-inverse {
+    background-color: #;
     border-color: #0c0c0c;
 }
 
@@ -46,4 +46,9 @@ textarea {
 .navbar-inverse .navbar-nav > .dropdown > a .caret {
     border-top-color: #fff;
     border-bottom-color: #fff;
+}*/
+
+.navbar-inverse {
+    background-color: #0c0c0c;
+    border-color: #0c0c0c;
 }

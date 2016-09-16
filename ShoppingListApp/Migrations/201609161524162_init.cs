@@ -42,6 +42,7 @@ namespace ShoppingListApp.Migrations
                         IsChecked = c.Boolean(nullable: false),
                         CreatedUtc = c.DateTimeOffset(nullable: false, precision: 7),
                         ModifiedUtc = c.DateTimeOffset(nullable: false, precision: 7),
+                        Options = c.Int(nullable: false),
                     })
                 .PrimaryKey(t => t.Id)
                 .ForeignKey("dbo.ShoppingLists", t => t.ShoppingListId, cascadeDelete: true)
@@ -56,6 +57,7 @@ namespace ShoppingListApp.Migrations
                         Color = c.String(),
                         CreatedUtc = c.DateTimeOffset(nullable: false, precision: 7),
                         ModifiedUtc = c.DateTimeOffset(nullable: false, precision: 7),
+                        Options = c.Int(nullable: false),
                     })
                 .PrimaryKey(t => t.Id);
             

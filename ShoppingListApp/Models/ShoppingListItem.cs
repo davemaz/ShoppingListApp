@@ -26,5 +26,6 @@ namespace ShoppingListApp.Models
 
         public virtual ShoppingList ShoppingList { get; set; }
         
+        public int Options { get; set; }
     }
 }
