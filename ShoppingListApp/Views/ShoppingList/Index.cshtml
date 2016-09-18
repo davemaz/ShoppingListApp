@@ -24,7 +24,7 @@
         <th>
             @Html.DisplayNameFor(model => model.Color)
         </th>
-        <th></th>
+        <th>Options</th>
     </tr>
 
 @foreach (var item in Model) {
@@ -35,9 +35,6 @@
         <td>
             @Html.DisplayFor(modelItem => item.Color)
         </td>
-        @*<td>
-            @Html.DisplayFor(modelItem => item.ModifiedUtc)
-        </td>*@
         <td>
             @*@Html.ActionLink("Edit", "Edit", new { id=item.Id }) |*@
             @*<input type="button" value="Show" onclick="location.href='@Url.Action("ItemsByList", "ShoppingListItem" )'" />*@
