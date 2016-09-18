@@ -18,7 +18,7 @@
         <th>
             @Html.DisplayNameFor(model => model.Name)
         </th>
-        <th style="width: 16%;">Options</th>
+        <th style="width: 22%;">Options</th>
     </tr>
 
 @foreach (var item in Model) {
@@ -28,6 +28,7 @@
         </td>
         <td>
             @Html.ActionLink("Show", "ItemsByList", "ShoppingListItem", new { id=item.Id }, new { @class = "btn btn-default" }) 
+            @Html.ActionLink("Edit", "Edit", new { id=item.Id }, new { @class="btn btn-default" }) 
             @Html.ActionLink("Delete", "Delete", new { id=item.Id }, new { @class = "btn btn-default" })
         </td>
     </tr>
