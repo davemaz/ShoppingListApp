@@ -116,7 +116,7 @@ namespace ShoppingListApp.Controllers
                 shoppingListItem.ModifiedUtc = DateTime.UtcNow;
                 db.Entry(shoppingListItem).State = EntityState.Modified;
                 db.SaveChanges();
-                return RedirectToAction("Index");
+                return RedirectToAction("Index", "ShoppingList");
             }
             ViewBag.ShoppingListId = new SelectList(db.ShoppingLists, "Id", "Name", shoppingListItem.ShoppingListId);
             return View(shoppingListItem);
