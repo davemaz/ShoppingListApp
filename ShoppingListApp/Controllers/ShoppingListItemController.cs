@@ -23,10 +23,18 @@ namespace ShoppingListApp.Controllers
             return View(shoppingListItems.ToList());
         }
 
+        public ActionResult ItemsByList(int id)
+        {
+
+            var shoppingListItems = db.ShoppingListItems.Include(s => s.ShoppingList).Where(l => l.ShoppingListId == id);
+            ViewBag.ShoppingListName = db.ShoppingLists.Find(id).Name;
+            return View(shoppingListItems.ToList());
+        }
+
         [HttpPost]
         public ActionResult ItemsByList(FormCollection formCollection)
         {
-            string[] ids = formCollection["itemId"].Split(new char[] {','});
+            string[] ids = formCollection["itemId"].Split(new char[] { ',' });
             foreach (string id in ids)
             {
                 var item = this.db.ShoppingListItems.Find(int.Parse(id));
@@ -34,13 +42,6 @@ namespace ShoppingListApp.Controllers
                 this.db.SaveChanges();
             }
             return RedirectToAction("ItemsByList");
-        }
-
-        public ActionResult ItemsByList(int id)
-        {
-
-            var shoppingListItems = db.ShoppingListItems.Include(s => s.ShoppingList).Where(l => l.ShoppingListId == id);
-            return View(shoppingListItems.ToList());
         }
 
         // GET: ShoppingListItem/Details/5
