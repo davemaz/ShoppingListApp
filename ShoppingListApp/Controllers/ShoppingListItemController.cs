@@ -23,6 +23,18 @@ namespace ShoppingListApp.Controllers
             return View(shoppingListItems.ToList());
         }
 
+        [HttpPost]
+        public ActionResult ItemsByList(FormCollection formCollection)
+        {
+            string[] ids = formCollection["itemId"].Split(new char[] {','});
+            foreach (string id in ids)
+            {
+                var item = this.db.ShoppingListItems.Find(int.Parse(id));
+                this.db.ShoppingListItems.Remove(item);
+                this.db.SaveChanges();
+            }
+            return RedirectToAction("ItemsByList");
+        }
 
         public ActionResult ItemsByList(int id)
         {

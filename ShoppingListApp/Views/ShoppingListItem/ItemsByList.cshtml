@@ -6,9 +6,6 @@
 
 <h2>List Items</h2>
 
-<input type="button" value="Add Item" style="float: right;" onclick="location.href='@Url.Action("Create", "ShoppingListItem")'" />
-@*<input type="button" value="Delete Checked" style="float: right;" onclick="location.href='@Url.Action("DeleteChecked")'" />*@
-
 <p>
     &nbsp;
 </p>
@@ -18,10 +15,17 @@
         @Html.ActionLink("Create New", "Create")
     </p>*@
 <hr />
+
+@using (Html.BeginForm("ItemsByList", "ShoppingListItem", FormMethod.Post))
+{
+    <div style="float: right; margin-bottom: 6px;">
+    <input type="submit" value="Delete Checked" onclick="return confirm('Are you sure?')" />
+    <input type="button" value="Add Item" onclick="location.href='@Url.Action("Create", "ShoppingListItem")'" />
+    </div>
 <table class="table">
     <tr bgcolor="#D3D3D3">
         <th>
-                @Html.DisplayNameFor(model => model.IsChecked)
+                <input type="checkbox" id="checkBoxAll" />
             </th>
             <th>
                 @Html.DisplayNameFor(model => model.ShoppingList.Name)
@@ -50,8 +54,7 @@
     {
         <tr>
             <td>
-                @*<input type="checkbox" name="CheckBox" value="@item.IsChecked" />*@
-                @Html.CheckBoxFor(modelItem => item.IsChecked)
+                <input type="checkbox" class="chkCheckBoxId" name="itemId" value="@item.Id" />
             </td>
             <td>
                 @Html.DisplayFor(modelItem => item.ShoppingList.Name)
@@ -80,3 +83,17 @@
     }
 
 </table>
+}
+
+@section scripts {
+    <script type="text/javascript">
+        $(document).ready(function () {
+            $('#checkBoxAll').click(function () {
+                if ($(this).is(":checked"))
+                    $('.chkCheckBoxId').prop('checked', true);
+                else
+                    $('.chkCheckBoxId').prop('checked', false);
+            });
+        });
+    </script>    
+}
