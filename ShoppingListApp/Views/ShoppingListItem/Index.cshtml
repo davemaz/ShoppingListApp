@@ -20,32 +20,29 @@
 <hr />
     <table class="table">
         <tr bgcolor="#D3D3D3">
-            @*<th>
+            <th>
                 @Html.DisplayNameFor(model => model.IsChecked)
             </th>
             <th>
                 @Html.DisplayNameFor(model => model.ShoppingList.Name)
-            </th>*@
+            </th>
             <th>
                 @Html.DisplayNameFor(model => model.Contents)
             </th>
-            @*<th>
+            <th>
                 @Html.DisplayNameFor(model => model.Note)
             </th>
             <th>
                 @Html.DisplayNameFor(model => model.Priority)
-            </th>*@
-            @*<th>
-                    @Html.DisplayNameFor(model => model.IsChecked)
-                </th>*@
-            @*<th>
+            </th>
+            <th>
                 @Html.DisplayNameFor(model => model.CreatedUtc)
             </th>
             <th>
                 @Html.DisplayNameFor(model => model.ModifiedUtc)
-            </th>*@
+            </th>
             <th>
-                @Html.DisplayNameFor(model => model.Options)
+                Options
             </th>
         </tr>
 
@@ -67,9 +64,6 @@
                 <td>
                     @Html.DisplayFor(modelItem => item.Priority)
                 </td>
-                @*<td>
-                        @Html.DisplayFor(modelItem => item.IsChecked)
-                    </td>*@
                 <td>
                     @Html.DisplayFor(modelItem => item.CreatedUtc)
                 </td>
