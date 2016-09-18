@@ -9,7 +9,10 @@
 @using (Html.BeginForm("ItemsByList", "ShoppingListItem", FormMethod.Post))
 {
     <div style="float: right; margin-bottom: 6px;">
-    <input type="submit" class="btn btn-default" value="Delete Checked" onclick="return confirm('Are you sure?')" />
+    @if (Model.Count() > 0)
+    {
+        <input type="submit" class="btn btn-default" value="Delete Checked" onclick="return confirm('Are you sure?')" />
+    }
     @Html.ActionLink("Add Item", "Create", null, new { @class = "btn btn-default" })
     </div>
 
