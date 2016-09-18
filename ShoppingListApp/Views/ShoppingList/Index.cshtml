@@ -8,7 +8,7 @@
 <h2>Shopping Lists</h2>
 
 <div style="float: right; margin-bottom: 6px;">
-    @Html.ActionLink("Add List", "Create", null, new { @class = "btn btn-primary" })
+    @Html.ActionLink("Add List", "Create", null, new { @class = "btn btn-default" })
 </div>
 
 <hr style="clear: both" />
@@ -27,8 +27,8 @@
             @Html.DisplayFor(modelItem => item.Name)
         </td>
         <td>
-            @Html.ActionLink("Show", "ItemsByList", "ShoppingListItem", new { id=item.Id }, new { @class = "btn btn-primary" }) 
-            @Html.ActionLink("Delete", "Delete", new { id=item.Id }, new { @class = "btn btn-primary" })
+            @Html.ActionLink("Show", "ItemsByList", "ShoppingListItem", new { id=item.Id }, new { @class = "btn btn-default" }) 
+            @Html.ActionLink("Delete", "Delete", new { id=item.Id }, new { @class = "btn btn-default" })
         </td>
     </tr>
 }
